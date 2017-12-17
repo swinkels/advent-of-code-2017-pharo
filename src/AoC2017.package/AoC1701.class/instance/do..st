@@ -1,11 +1,9 @@
 enumerating
-do: aString 
-| sum |
-sum := 0.
-1 to: aString size do: [ :index |
-	| nextIndex isEqualToNext |
-	nextIndex := ((index + 1) % (aString size + 1)) max: 1.
-	isEqualToNext := (aString at: index) = (aString at: nextIndex).
-	isEqualToNext ifTrue: [ sum := sum + (aString at: index) digitValue ] 
-	].
-^ sum
+do: aString
+	| result length |
+	length := aString size.
+	result := (1 to: length - 1)
+		inject: 0
+		into:
+			[ :sum :index | sum + (self getValueOf: aString at: index and: index + 1) ].
+	^ result + (self getValueOf: aString at: length and: 1)
