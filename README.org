@@ -1,0 +1,29 @@
+This repo contains my solutions to exercises of the [[https://adventofcode.com/][Advent of Code 2017]], "a
+series of small programming puzzles for a variety of skill levels". I have
+developed my solutions in [[https://pharo.org/][Pharo]], an open-source Smalltalk inspired system.
+
+* Installation
+
+At the time of writing, December 21, 2017, the current version of Pharo is 6.1.
+However, that version does not play nicely with the latest version of [[https://github.com/pharo-vcs/iceberg][Iceberg]],
+the Git integration that is available in Pharo. Pharo 7.0, which is still under
+development, does work with Iceberg so I used that.
+
+The following may be out of date by the time you read this. To use Pharo 7.0, I
+had to download the 7.0 virtual machine, the image and the sources:
+#+BEGIN_SRC sh
+$> mkdir Pharo7.0 ; cd Pharo7.0
+$> wget -O- get.pharo.org/64/vmLatest70 | bash
+$> wget -O- get.pharo.org/64/61 | bash
+$> wget http://files.pharo.org/get-files/61/sources.zip
+$> unzip sources.zip
+#+END_SRC
+Then, execute =./pharo-ui= to start Pharo.
+
+Loading the packages of this repo into Pharo goes beyond the scope of this
+README. For that I refer to the [[https://github.com/pharo-vcs/iceberg#5-minutes-tutorial][5-minute tutorial]] of Iceberg.
+
+* Solutions
+
+My solutions can be found in package AoC2017 and the tests in package
+AoC2017-Tests.
