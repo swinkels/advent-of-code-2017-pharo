@@ -1,4 +1,4 @@
-instance creation
+as yet unclassified
 new: aRows
 	"comment stating purpose of message"
 
