@@ -1,3 +1,3 @@
 as yet unclassified
 solve: aRows
-	^ aRows sumNumbers: [ :row | row max - row min ]
+	^ aRows sumNumbers: [ :row | self computeValue: row ]

@@ -1,9 +1,9 @@
 tests
-testSolution
+testSolutionPartTwo
 	"comment stating purpose of message"
 
 	| challenge input |
-	challenge := AoC1702 new.
+	challenge := AoC1702 forSolver: Solve1702Part2 new.
 	input := 	'4347	3350	196	162	233	4932	4419	3485	4509	4287	4433	4033	207	3682	2193	4223
 648	94	778	957	1634	2885	1964	2929	2754	89	972	112	80	2819	543	2820
 400	133	1010	918	1154	1008	126	150	1118	117	148	463	141	940	1101	89
@@ -21,4 +21,4 @@ testSolution
 401	151	309	961	124	1027	1084	389	1150	166	1057	137	932	669	590	188
 784	232	363	316	336	666	711	430	192	867	628	57	222	575	622	234
 '.
-	self assert: (challenge do: input) equals: 47136
+	self assert: (challenge do: input) equals: 250

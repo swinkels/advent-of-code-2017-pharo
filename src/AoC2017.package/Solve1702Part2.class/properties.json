@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "Solve1702",
 	"category" : "AoC2017",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"solver"
-	],
-	"name" : "AoC1702",
+	"instvars" : [ ],
+	"name" : "Solve1702Part2",
 	"type" : "normal"
 }
