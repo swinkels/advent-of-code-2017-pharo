@@ -1,4 +1,4 @@
-as yet unclassified
+utils
 computeValue: row
 	row
 		do: [ :divisor | 

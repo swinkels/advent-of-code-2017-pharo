@@ -4,4 +4,4 @@ do: aString
 
 	| rows |
 	rows := ConvertInput1702 new createRows: aString.
-	^ solver solve: rows.
+	^ solver execute: rows.

@@ -1,3 +1,3 @@
-as yet unclassified
-solve: aRows
+commands
+execute: aRows
 	^ aRows sumNumbers: [ :row | self computeValue: row ]

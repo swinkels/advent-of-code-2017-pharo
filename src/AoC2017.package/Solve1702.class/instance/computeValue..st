@@ -1,3 +1,3 @@
-as yet unclassified
+utils
 computeValue: row
 	^ row max - row min
