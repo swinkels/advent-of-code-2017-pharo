@@ -10,13 +10,10 @@ the Git integration that is available in Pharo. Pharo 7.0, which is still under
 development, does work with Iceberg so I used that.
 
 The following may be out of date by the time you read this. To use Pharo 7.0, I
-had to download the 7.0 virtual machine, the image and the sources:
+downloaded the 7.0 virtual machine, image and sources as follows:
 #+BEGIN_SRC sh
 $> mkdir Pharo7.0 ; cd Pharo7.0
-$> wget -O- get.pharo.org/64/vmLatest70 | bash
-$> wget -O- get.pharo.org/64/61 | bash
-$> wget http://files.pharo.org/get-files/61/sources.zip
-$> unzip sources.zip
+$> wget -0- https://get.pharo.org/70+vm | bash
 #+END_SRC
 Then, execute =./pharo-ui= to start Pharo.
 
