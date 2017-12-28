@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OuterRow",
+	"category" : "AoC2017",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BottomRow",
+	"type" : "normal"
+}
