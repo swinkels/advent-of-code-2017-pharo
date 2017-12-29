@@ -1,4 +1,4 @@
-as yet unclassified
+actions
 handleMove: snakeHead
  
 	snakeHead moveLeft.

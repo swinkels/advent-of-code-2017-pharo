@@ -1,3 +1,3 @@
-accessing
+actions
 move
-	self state handleMove: self
+	state handleMove: self

@@ -1,4 +1,4 @@
-as yet unclassified
+actions
 handleMove: snakeHead
 	"comment stating purpose of message"
 
