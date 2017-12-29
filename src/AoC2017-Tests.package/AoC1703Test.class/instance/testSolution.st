@@ -5,7 +5,7 @@ testSolution
 	| head distance |
 	
 	head := SnakeHead new.
-   [ head value == 312051 ] whileFalse: [ head move ].
+   [ head value = 312051 ] whileFalse: [ head move ].
 
 	distance := head x abs + head y abs.
 	self assert: distance equals: 430
