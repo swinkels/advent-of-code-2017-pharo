@@ -6,5 +6,5 @@ initialize
 	y := 0.
 	radius := 0.
 
-	values := MoveCount new.
+	addressContent := MoveCount new.
 	state := BottomRow new

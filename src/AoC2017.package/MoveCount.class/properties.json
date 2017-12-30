@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "AddressContent",
 	"category" : "AoC2017",
 	"classinstvars" : [ ],
 	"pools" : [ ],

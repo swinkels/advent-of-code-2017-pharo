@@ -2,10 +2,10 @@ tests
 testSolutionPartTwo
 	"comment stating purpose of message"
 
-	| head |
+	| pointer |
 	
-	head := SnakeHead new.
-	head useValues: LocalSum new.
-   [ head value > 312051 ] whileFalse: [ head move ].
+	pointer := AddressPointer new.
+	pointer computeContentUsing: LocalSum new.
+   [ pointer value > 312051 ] whileFalse: [ pointer move ].
 
-	self assert: head value equals: 312453
+	self assert: pointer value equals: 312453

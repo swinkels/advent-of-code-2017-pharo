@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"x",
-		"y",
-		"state",
-		"radius",
-		"values"
-	],
-	"name" : "SnakeHead",
+	"instvars" : [ ],
+	"name" : "AddressContent",
 	"type" : "normal"
 }

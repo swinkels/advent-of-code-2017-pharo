@@ -2,10 +2,10 @@ tests
 testSolution
 	"comment stating purpose of message"
 
-	| head distance |
+	| pointer distance |
 	
-	head := SnakeHead new.
-   [ head value = 312051 ] whileFalse: [ head move ].
+	pointer := AddressPointer new.
+   [ pointer value = 312051 ] whileFalse: [ pointer move ].
 
-	distance := head x abs + head y abs.
+	distance := pointer x abs + pointer y abs.
 	self assert: distance equals: 430
