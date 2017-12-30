@@ -4,6 +4,7 @@ initialize
 
 	x := 0.
 	y := 0.
-	value := 1.
 	radius := 0.
+
+	values := MoveCount new.
 	state := BottomRow new

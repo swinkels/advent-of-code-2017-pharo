@@ -3,7 +3,6 @@ handleMove: snakeHead
 	"comment stating purpose of message"
 
 	snakeHead moveRight.
-	snakeHead incrementValue.
 
 	snakeHead x <= snakeHead radius
 		ifTrue: [ ^ self ].

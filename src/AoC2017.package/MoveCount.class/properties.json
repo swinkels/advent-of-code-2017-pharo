@@ -6,12 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"x",
-		"y",
-		"state",
-		"radius",
-		"values"
+		"value"
 	],
-	"name" : "SnakeHead",
+	"name" : "MoveCount",
 	"type" : "normal"
 }

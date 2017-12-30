@@ -6,12 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"x",
-		"y",
-		"state",
-		"radius",
-		"values"
+		"coord2value",
+		"value"
 	],
-	"name" : "SnakeHead",
+	"name" : "LocalSum",
 	"type" : "normal"
 }
