@@ -24,3 +24,5 @@ README. For that I refer to the [[https://github.com/pharo-vcs/iceberg#5-minutes
 
 My solutions can be found in package AoC2017 and the tests in package
 AoC2017-Tests.
+
+Subdirectory docs/ contains explanations to several challenges.

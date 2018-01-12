@@ -1,0 +1,96 @@
+* Challenge
+
+The challenge is about a new kind of memory that places the mempory cells "in a
+spiral pattern starting at a location marked 1 and then counting up while
+spiraling outward". As an example, it shows the following memory layout:
+
+#+BEGIN_SRC
+17  16  15  14  13
+18   5   4   3  12
+19   6   1   2  11
+20   7   8   9  10
+21  22  23---> ...
+#+END_SRC
+
+* Part 1
+
+The first question is, what is the number of steps from the cell with value
+312051 back to the cell marked 1? To give a small example, the number of steps
+from the cell marked 14 to the cell marked 1 is 3: you go 1 step to the left and
+2 steps down.
+
+To be honest, I did not know how to answer this question in code. Furthermore I
+had an idea how to solve this manually. So let's start with the manual approach.
+
+** Manual approach
+
+I noticed that the number of cells in a block followed a pattern. Let w be the
+width of a block of cells, then for
+
+- w = 1, the block contains 1 cell
+- w = 3, 9 cells,
+- w = 5, 25 cells,
+- w = 7, 49 cells, etc.
+
+So the number of cells for a block of width w, where w is an uneven number, is
+w^2.
+
+The largest uneven number that, when squared, is smaller than 312051, is 557:
+
+- w = 557, 310249 cells and
+- w = 559, 312481 cells.
+
+This means that the cell marked 312051, or cell 312051 for short, is on a row or
+column of cells that surrounds the block with width 557.
+
+We know that the cell at the bottom right of the block with width 557 is
+310249. If we start in this cell and keep moving to the next cell, we will
+"visit" the cells in the right column of the block with width 559. The top-right
+cell of that block will is 312049 + 558 = 310807. In a similar way we move to
+the top-left cell of the new block, which is 310807 + 558 = 311365, and the
+bottom-left cell 311365 + 558 = 311923.
+
+Now we have almost arrived at the answer to the question. Cell 312051 is only
+128 cells to the right of the bottom left cell. If we place the cell marked 1 at
+coordinates (0, 0), the left column has x-coordinate -(559 - 1) / 2 = -279. To
+reach the column of cell 1, we have to take 279 - 128 = 151 steps to the right.
+The bottom row has y-coordinate -279 so we have to take 279 steps to reach the
+row of cell 1. This means that the total number of steps we have to take is
+279 + 151 = 430.
+
+** Automated approach
+
+* TODO Part 2
+
+index( 0,  0) = 1
+index( 1,  0) = 2
+index( 1,  1) = 3
+index( 0,  1) = 4
+index(-1,  1) = 5
+index(-1,  0) = 6
+index(-1, -1) = 7
+index( 0, -1) = 8
+index( 1, -1) = 9
+
+State machine:
+
+moveRight
+moveUp
+moveLeft
+moveDown
+
+x = 0, y = 0, value = 1, radius = 1
+nextMove = moveRight
+
+if nextMove = MoveRight and x > radius:
+  radius := x
+  nextMove := moveUp
+
+if nextMove = moveUp and y = radius:
+  nextMove := moveLeft
+
+if nextMove = moveLeft and x = -radius:
+  nextMove := moveDown
+
+if nextMove = moveDown and y = -radius:
+  nextMove := moveRight
